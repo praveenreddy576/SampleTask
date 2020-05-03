@@ -19,6 +19,7 @@
 		92ABCA00245EE30500D864C2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 92ABC9FE245EE30500D864C2 /* Main.storyboard */; };
 		92ABCA02245EE30700D864C2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 92ABCA01245EE30700D864C2 /* Assets.xcassets */; };
 		92ABCA05245EE30700D864C2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 92ABCA03245EE30700D864C2 /* LaunchScreen.storyboard */; };
+		92F478BC245F1CDA0032C083 /* CountryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92F478BB245F1CDA0032C083 /* CountryViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,7 @@
 		92ABCA01245EE30700D864C2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		92ABCA04245EE30700D864C2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		92ABCA06245EE30700D864C2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		92F478BB245F1CDA0032C083 /* CountryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryViewModel.swift; sourceTree = "<group>"; };
 		AE3D25D1D6059D3F7C35FCD9 /* Pods-TaskSample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TaskSample.debug.xcconfig"; path = "Target Support Files/Pods-TaskSample/Pods-TaskSample.debug.xcconfig"; sourceTree = "<group>"; };
 		B02AC6463F7752E112ED1D03 /* Pods_TaskSample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TaskSample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E6C45B73BA383F93C5804005 /* Pods-TaskSample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TaskSample.release.xcconfig"; path = "Target Support Files/Pods-TaskSample/Pods-TaskSample.release.xcconfig"; sourceTree = "<group>"; };
@@ -83,6 +85,7 @@
 				9289C9F5245EFA8500F725E5 /* CountryAPI.swift */,
 			);
 			name = Service;
+			path = ../..;
 			sourceTree = "<group>";
 		};
 		9289C9F8245EFAD100F725E5 /* Resources */ = {
@@ -96,6 +99,7 @@
 		9289C9F9245EFD2F00F725E5 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				9289C9FE245EFDB700F725E5 /* ImageView+Additions.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -121,20 +125,44 @@
 		92ABC9F7245EE30500D864C2 /* TaskSample */ = {
 			isa = PBXGroup;
 			children = (
-				9289C9FE245EFDB700F725E5 /* ImageView+Additions.swift */,
 				9289C9F9245EFD2F00F725E5 /* Helpers */,
 				9289C9F8245EFAD100F725E5 /* Resources */,
 				92ABC9F8245EE30500D864C2 /* AppDelegate.swift */,
 				92ABC9FA245EE30500D864C2 /* SceneDelegate.swift */,
-				9289C9F7245EFA9100F725E5 /* Service */,
-				9289C9F4245EF9A800F725E5 /* Controller */,
-				9289C9F3245EF94900F725E5 /* Model */,
-				9289C9EE245EF8BF00F725E5 /* View */,
+				92F478BE245F20F20032C083 /* Screens */,
 				92ABC9FE245EE30500D864C2 /* Main.storyboard */,
 				92ABCA03245EE30700D864C2 /* LaunchScreen.storyboard */,
 				92ABCA06245EE30700D864C2 /* Info.plist */,
 			);
 			path = TaskSample;
+			sourceTree = "<group>";
+		};
+		92F478BD245F1CDF0032C083 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				92F478BB245F1CDA0032C083 /* CountryViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		92F478BE245F20F20032C083 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				92F478BF245F21170032C083 /* Home */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		92F478BF245F21170032C083 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				92F478BD245F1CDF0032C083 /* ViewModel */,
+				9289C9F7245EFA9100F725E5 /* Service */,
+				9289C9F3245EF94900F725E5 /* Model */,
+				9289C9EE245EF8BF00F725E5 /* View */,
+				9289C9F4245EF9A800F725E5 /* Controller */,
+			);
+			path = Home;
 			sourceTree = "<group>";
 		};
 		B927CC558983A831CCB9C843 /* Pods */ = {
@@ -272,6 +300,7 @@
 				9289C9ED245EF8B200F725E5 /* AboutCountryCell.swift in Sources */,
 				92ABC9FD245EE30500D864C2 /* ViewController.swift in Sources */,
 				92ABC9F9245EE30500D864C2 /* AppDelegate.swift in Sources */,
+				92F478BC245F1CDA0032C083 /* CountryViewModel.swift in Sources */,
 				9289C9F0245EF91C00F725E5 /* Country.swift in Sources */,
 				9289C9FF245EFDB700F725E5 /* ImageView+Additions.swift in Sources */,
 				9289C9F2245EF93C00F725E5 /* Row.swift in Sources */,

@@ -7,7 +7,25 @@
 //
 
 import UIKit
-
+import Alamofire
+import SwiftyJSON
 class CountryAPI: NSObject {
+    
+    
+   private let URL = "https://dl.dropboxusercontent.com/s/2iodh4vg0eortkl/facts.json"
+      
+      func fetch(completion: @escaping (_ country: Country?, _ error: Error?) -> ()) {
+          AF.request(URL, method: .get).responseString { response in
+              switch response.result {
+              case .success(let value):
+                  let country = Country(fromJson: JSON(parseJSON: value))
+                  completion(country, nil)
+              case .failure(let error):
+                  completion(nil, error)
+              }
+          }
+      }
+    
+    
 
 }
